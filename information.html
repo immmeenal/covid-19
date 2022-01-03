@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>CoVi</title>
+  <!-- css Style link -->
+  <link rel="stylesheet" href="InfoStyle.css">
+  <!-- css bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <!-- Google FOnts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div>
+    <nav class="navbar bg-success navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand"><b>CoVi</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item first-nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="information.html">Information</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#assessment">Assessment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registration.html">Find Vaccination Centers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Registration</a>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Section Header -->
+  <section id="header">
+    <div class="row">
+      <div class="essay col-lg-7">
+        <h1 class="title">India Fights With Corona</h1>
+        <p>
+          While India was flourishing and growing with its almighty, it was hit badly by Corona or Covid-19 and als! Everything came to a halt! The most affected was the middle class, but as we all know, India is a diversified country, we all live
+          together and have always been there for each other, and hence for all the ones out there out of the national boundaries, we INDIANS are known for unity in diversity. This pandemic has taken away a lot of things from us. At times when
+          everyone was trying to become wealthy and collect money, it was leart that money is not everything one needs to survive, it's rather the goodwill, the kindness and the loved ones. That came out to help. People from all races, caste, creed
+          and religion came out for help to the needy. When the virus attacked, it took away even the riches, the celebrities and the common too. It didn't take away only the poors, so much money could not save the riches. But yess, after helping out
+          each other, and following all the safety protocols at the personal level, we have come this far, and survived the pandemic with all our might,healthy habits and good governance.
+          By maintaining safe distance, wearing masks, sanitizing places, following hygiene, we have come up to the present day and are still fighting corona. The doctors, the police, the healthcare workers, many lost their Lives, but none gave
+          up,working even harder each time
+          <span id="dots">...</span>
+          <span id="more">
+            , to keep the citizens safe, truly they are the superheroes of mankind. By the time the second wave came most of the citizens were getting vaccinated, and as we all know our country has always been a peaceful
+            nation, the government of India donated crores and crores of vaccines to other countries too as a token of goodwill under the mission VACCINE MAITRI. And for this Index has also come to be known as the producer of medicine. India has not
+            just fought the pandemic within national boundaries but also helped fight against corona internationally. As our ancestors have taught VASUDHAIVA KUTUMBAKAM which means the whole universe as a family, our country India has proved it
+            correctly! The citizens followed all the safety protocols, although there were problems as we are a developing nation, Covid-19 was something the world was unaware of, & took time and is still talking, but we have come a long way, and we
+            will definitely win this war with CORONA definitely. Everyone came out to help each other, by donation, by imparting knowledge, by giving their own resources and in some other way. We may not be doctors, healthcare workers or police, but
+            we all are responsible citizens of India, and by small acts of preparedness, awareness and cleanliness, the citizens will fight back, India will fight back Covid-19 Jay Hind Jay Bharat
+          </span>
+          <a id="less" onclick="showText()">Read More…</a>
+          <!-- <span id="less" onclick="showText()"><a id="less" onclick="showText()">Read More…</a></span> -->
+        </p>
+      </div>
+      <div id="image" class="col-lg-5">
+        <img src="Images/covid19-img1.png" alt="">
+      </div>
+    </div>
+  </section>
+  <!-- End of header section -->
+
+  <!-- Quote Section -->
+  <!-- <section id="Quote">
+    <div class="quote">
+      <h1 onmouseover="changeCol(this)" onmouseout="normalCol(this)">"WE ARE IN THIS TOGETHER AND WE WILL GET TOGETHER THIS TOGETHER"</h1>
+    </div>
+  </section> -->
+
+  <!-- API Section -->
+  <section id="box">
+    <div class="row">
+
+      <div class="col-lg-12">
+        <div class="heading">
+          <h1 class="title">COVID-19 Cases in India</h1>
+          <h4>as on : </h4>
+          <h4 id="date"></h4>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="APIcard box1">
+          <div class="card-body">
+            <h1>Total Confirmed Cases</h1>
+            <h3 id="data1"></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="APIcard box2">
+          <div class="card-body">
+            <h1>Total Confirmed Deaths</h1>
+            <h3 id="data2"></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="APIcard box3">
+          <div class="card-body">
+            <h1>Total Recovered Cases</h1>
+            <h3 id="data3"></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class=" row2 col-lg-4 col-md-6">
+        <div class="APIcard box4">
+          <div class="card-body">
+            <h1>Total Active Cases</h1>
+            <h3 id="data4"></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row2 col-lg-4 col-md-6">
+        <div class="APIcard box5">
+          <div class="card-body">
+            <h1>Critical Cases Found</h1>
+            <h3 id="data5"></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row2 col-lg-4 col-md-6">
+        <div class="APIcard box6">
+          <div class="card-body">
+            <h1>Total Tests Done</h1>
+            <h3 id="data6"></h3>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Video Section. -->
+
+  <section class="video">
+         <div class="videoproject">
+             <div class="titlevideo">
+                 <h1 class="title">Covid-19 Videos</h1>
+             </div>
+             <div class='ytvideo'>
+                 <iframe onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" onclick="playVideo()" width="400" height="250" src="https://youtube.com/embed/4hWaPu6xchE"></iframe>
+                 <iframe onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" onclick="playVideo()" width="400" height="250" src="https://youtube.com/embed/o2HLkFi4Qtw"></iframe>
+                 <iframe onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" onclick="playVideo()" width="400" height="250" src="https://youtube.com/embed/Ath5gDu8HEY"></iframe>
+             </div>
+         </div>
+     </section>
+
+<!-- Spreading and prevention from Covid-19 -->
+
+<section id="sympotems">
+  <div class="row ">
+    <div class="col-lg-6">
+      <!-- vertical line -->
+      <div id="verticalLine1"></div>
+
+      <div class="table">
+        <table cellspacing="20">
+          <tr>
+            <td><img src="Images/symptom.png" alt="" height="200"></td>
+            <td>
+              <h1 class="heading" onmouseover="changeCol1(this)" onmouseout="normalCol1(this)">COVID-19 Symptoms</h1>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+    <div class="col-lg-6">
+      <div class="row row-align">
+
+        <div class="column col-lg-6 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Images/symptom-1.png" alt="" height="100" width="100">
+            </div>
+            <div class="card-footer">
+              <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">High Fever</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="column col-lg-6 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Images/symptom-2.png" alt="" height="100">
+            </div>
+            <div class="card-footer">
+              <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Dry Cough</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="new">
+      <div class="row row-align">
+        <div class=" col-lg-6 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Images/symptom-3.png" alt="" height="100">
+            </div>
+            <div class="card-footer">
+              <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Sore Thorat</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Images/symptom-4.png" alt="" height="100">
+            </div>
+            <div class="card-footer">
+              <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Difficulty in Breathing</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <button id="button" class="btn btn-warning" onclick="showhide()">Show Less</button>
+</section>
+
+<!-- Spreading and Prevention Section  -->
+<section id="spread">
+  <div class="row row-align2">
+    <div class="col-lg-6">
+      <h1 class="heading" onmouseover="changeCol1(this)" onmouseout="normalCol1(this)">How Covid-19 Spread</h1>
+    </div>
+    <div class="col-lg-6">
+      <h1 class="heading" onmouseover="changeCol1(this)" onmouseout="normalCol1(this)">Prevention From Covid-19</h1>
+    </div>
+
+    <div id="verticalLine2"></div>
+
+    <div class="column col-lg-3 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" id="img1" src="Images/spread-1.png" alt="" height="100" width="100">
+        </div>
+        <div class="card-footer">
+          <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Air by Cough or Sneeze</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="column col-lg-3 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Images/spread-2.png" alt="" height="100">
+        </div>
+        <div class="card-footer">
+          <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Personal Contact</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="column col-lg-3 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Images/prevention-1.png" alt="" height="100">
+        </div>
+        <div class="card-footer">
+          <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Wash youe Hands often</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="column col-lg-3 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Images/prevention-2.png" alt="" height="100">
+        </div>
+        <div class="card-footer">
+          <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Wear a Face Mask</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="column col-lg-3 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" id="img1" src="Images/spread-3.png" alt="" height="100" width="100">
+        </div>
+        <div class="card-footer">
+          <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Contaminated Object</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="column col-lg-3 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Images/spread-4.png" alt="" height="100">
+        </div>
+        <div class="card-footer">
+          <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Mass Gathering</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="column col-lg-3 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Images/prevention-3.png" alt="" height="100">
+        </div>
+        <div class="card-footer">
+          <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Avoid Contact</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="column col-lg-3 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="Images/prevention-4.png" alt="" height="100">
+        </div>
+        <div class="card-footer">
+          <h2 onmouseover="changeCol(this)" onmouseout="normalCol(this)">Always Cover Your Cough</h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<footer id="main-footer" class="py-4 bg-success text-white text-center" style="margin-top: 1.5rem; ">
+  Copyright &copy;
+  <span class="year"></span>CoVi Tracker
+</footer>
+<script type="text/javascript" src="app.js">
+
+</script>
+
+</body>
+
+</html>

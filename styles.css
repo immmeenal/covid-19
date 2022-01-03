@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  color: black;
+  font-family: 'Catamaran', sans-serif;
+}
+
+em {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+/****************************** Navigation bar ****************/
+.first-nav-item {
+  padding-left: 30px;
+}
+
+.navbar {
+  width: 100%;
+  height: 65px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 18px;
+}
+
+/*************************** Home ********************/
+
+.slide {
+  position: relative;
+}
+
+.slide img {
+  opacity: 0.9;
+}
+
+.text {
+  width: 45%;
+  text-align: left;
+  padding: 0.8rem 3rem;
+  top: 10rem;
+  position: absolute;
+}
+
+/*********************** Assessment section **************************/
+.assessment {
+  text-align: center;
+  padding: 5rem;
+  background-color: #80cd50;
+}
+
+#assessment h2 {
+  color: black;
+}
+
+#assessment p {
+  font-size: 18px;
+}
+
+#btn-assessment {
+  margin-top: 1.5rem;
+}
+
+.btn-intial-effect {
+  background: #000000;
+  box-shadow: 0 1px 3px #666666ff;
+  border-radius: 28px;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #000000 2px;
+}
+
+.btn-after-effect {
+  color: black;
+  border-color: #d8d7cf;
+  background: #d8d7cf;
+  background-image: -webkit-linear-gradient(top, #d8d7cf, #666666ff);
+}
+
+/****************************** Assessment Page *****************************/
+.assessmentBody {
+  background-color: #e7f5dc;
+}
+
+/***************************** Questions Section *****************************/
+.questionSection {
+  padding: 2rem;
+}
+
+.question {
+  width: 40%;
+  border: #60c224 solid 1px;
+  padding: 0.8rem 0.6rem;
+  border-radius: 16px 16px 16px 0;
+  text-align: left;
+}
+
+.optionDiv {
+  width: 40%;
+}
+
+.option, .resultReply {
+  border: #80cd50 solid 1px;
+  background-color: #80cd50;
+  padding: 0.3rem 1.2rem;
+  border-radius: 13px 13px 13px 13px;
+  text-align: left;
+  display: inline-block;
+}
+
+.option1, .option2, .option3, .option4, .option5, .option6, .option7, .option8, .option9, .option10, .option11 {
+  display: inline-block;
+}
+
+.option-after-effect {
+  border: #4c9b1c solid 1px;
+  background-color: #4c9b1c;
+}
+
+.replyDiv {
+  text-align: right;
+  padding-top: 2rem;
+  padding-right: 1.5rem;
+}
+
+.replyEffect {
+  border: #60c224 solid 1px;
+  padding: 0.8rem 1.1rem;
+  border-radius: 16px 16px 0 16px;
+  display: inline-block;
+}
+
+/******************************************* Next Button **************************************/
+#Next {
+  text-align: center;
+}
+
+.NextInvisible {
+  visibility: hidden;
+}
+
+.NextButton {
+  padding: 0.2rem 1.3rem;
+  display: inline-block;
+}
+
+.NextButton:hover {
+  border-color: #ffd700;
+  background-color: #ffd700;
+}
+
+/* #60c224 */
+/* #80cd50 */
+/* #6cce32 */
